@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location name:</b>
+  <%= @store.location_name %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= link_to @store.company_name, @store.company %>
+</p>
+
+<p>
+  <b>Last admin email sent:</b>
+  <%= @store.last_admin_email || "never" %>
+</p>
+
+<p><b>Employees (<%= @store.employees.count %> in total):</b></p>
+<ul id="employees-list">
+  <% @store.employees.each do |e| %>
+    <li><%= link_to e.full_name, e %> (<%= e.email %>)</li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_store_path(@store) %><br />
+<%= link_to 'Back', stores_path %>

@@ -1,0 +1,23 @@
+<h1>Listing companies</h1>
+
+<table id="companies-list">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @companies.each do |company| %>
+      <%= render company %>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<div id="new-company-wrapper">
+  <%= link_to 'New Company', new_company_path, id: "new-company-link", remote: true %>
+</div>

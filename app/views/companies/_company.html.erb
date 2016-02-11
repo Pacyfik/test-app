@@ -1,0 +1,5 @@
+<tr id="company_<%= company.id %>">
+  <td><%= company.name %></td>
+  <td><%= link_to 'Show', company %></td>
+  <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure? This action will destroy all associated stores and possibly some employees.' }, remote: true %></td>
+</tr>

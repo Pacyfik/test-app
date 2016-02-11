@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @company.name %>
+</p>
+
+<p><b>Stores:</b></p>
+<ul id="stores-list">
+  <% @company.stores.each do |store| %>
+    <li id="store_<%= store.id %>"><%= link_to store.location_name, store %> (<%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure? This action might destroy some of the associated employees.' }, remote: true %>)</li>
+  <% end %>
+</ul>
+
+<div id="new-store-wrapper"></div>
+
+<%= link_to 'Create & add a new store', company_new_store_path(@company), id: "new-store-link", remote: true %><br />
+<%= link_to 'Back', companies_path %>

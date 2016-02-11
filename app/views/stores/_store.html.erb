@@ -1,0 +1,9 @@
+<tr id="store_<%= store.id %>">
+  <td><%= store.location_name %></td>
+  <td><%= link_to store.company_name, store.company %></td>
+  <td><%= store.employees.count %></td>
+  <td><%= link_to 'Send admin an email', store_send_admin_email_path(store.id), remote: true %></td>
+  <td><%= link_to 'Show', store %></td>
+  <td><%= link_to 'Edit', edit_store_path(store) %></td>
+  <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure? This action might destroy some of the associated employees.' }, remote: true %></td>
+</tr>

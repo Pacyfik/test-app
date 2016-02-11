@@ -1,0 +1,11 @@
+<%= form_for(@company, remote: true) do |f| %>
+  <%= f.fields_for :stores, @company.stores.build do |ff| %>
+    <div class="field">
+      <%= ff.label :location_name %><br />
+      <%= ff.text_field :location_name %>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= f.submit "Create store" %>
+  </div>
+<% end %>

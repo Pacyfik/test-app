@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @employee.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @employee.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @employee.email %>
+</p>
+
+<p><b>Stores:</b></p>
+<ul>
+  <% @employee.stores.each do |store| %>
+    <li><%= link_to store.location_name, store %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_employee_path(@employee) %><br />
+<%= link_to 'Back', employees_path %>

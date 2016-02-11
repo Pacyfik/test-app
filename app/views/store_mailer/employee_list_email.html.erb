@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>This is a list of employees of "<%= @store.location_name %>"</h1>
+    <% if @store.employees.count == 0 %>
+      <p>This store has no employees.</p>
+    <% else %>
+      <ul>
+        <% @store.employees.each do |e| %>
+        <li><%= e.full_name %> (<%= e.email %>)</li>
+        <% end %>
+      </ul>
+    <% end %>
+  </body>
+</html>

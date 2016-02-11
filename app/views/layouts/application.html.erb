@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HrApp</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><%= link_to "Main page", root_path %></li>
+        <li><%= link_to "Companies list", companies_path %></li>
+        <li><%= link_to "Stores list", stores_path %></li>
+        <li><%= link_to "Employees list", employees_path %></li>
+      </ul>
+    </header>
+
+    <div id="content">
+      <%= yield %>
+    </div>
+
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+This is a list of employees of "<%= @store.location_name %>"
+============================================================
+<% if @store.employees.count == 0 %>
+This store has no employees.
+<% else %>
+<% @store.employees.each do |e| %>
+- <%= e.full_name %> (<%= e.email %>)
+<% end %>
+<% end %>

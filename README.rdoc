@@ -1,0 +1,16 @@
+== Test app
+
+A test app made as a part of a recruitment process.
+Created in February 2015.
+Originally written in Rails 3.2, hastily upgraded to Rails 4.2 a year later.
+
+== Original instructions
+
+Instructions included:
+- creating company, store and employee models with appropriate attributes and relationships
+- adding views to list all companies, stores, employees and individual entities
+- editing aforementioned entities (along with removing associated objects)
+- ability to send an email to a store administrator and recording the date of the last sent email
+- bonus points for implementing some of the functionalities through ajax
+- no testing required
+- design not important
